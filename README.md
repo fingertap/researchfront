@@ -1,3 +1,10 @@
-# My Awesome Book
+# Research Front Project
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+这个计划尝试实行30天。
+
+## 目标
+
+* 了解机器学习前沿研究
+
+
+
