@@ -5,3 +5,5 @@
   * [(NIPS18) Non-delusional Q-learning and Value-iteration ](RL/nips18-non-delusional.md)
 * [深度学习](DL/README.md)
   * [(NIPS18) Optimal Algorithms for Non-Smooth Distributed Optimization in Networks](DL/nips18-optimal.md)
+* [相关阅读](Extend/README.md)
+  * [(SIAM Journal on Optimization) Randomized smoothing for stochastic optimization](Extend/siam12-randomized.md)
