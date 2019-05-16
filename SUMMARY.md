@@ -7,5 +7,7 @@
 	* [(CVPR'14) R-CNN](DL/rcnn.md)
 	* [(ICCV'15) Fast R-CNN](DL/fast-rcnn.md)
 	* [(NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](DL/faster-rcnn.md)
+	* [(ICCV'17) Mask R-CNN](DL/mask-rcnn.md)
+	* [Review: Graph Nueral Networks](DL/gnn-review.md)
 * [相关阅读](Extend/README.md) 
 	* [(SIAM Journal on Optimization) Randomized smoothing for stochastic optimization](Extend/siam12-randomized.md) 
