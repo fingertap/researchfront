@@ -24,3 +24,6 @@ cp -r _book/* .
 git add .
 git commit -m 'Publish'
 git push -f origin gh-pages
+# Cleaning
+git checkout master
+git branch -D gh-pages
