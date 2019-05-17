@@ -1,0 +1,419 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>(NIPS'18) Non-delusional Q-learning and Value-iteration  · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../DL/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Research Front Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    强化学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="nips18-non-delusional.html">
+            
+                <a href="nips18-non-delusional.html">
+            
+                    
+                    (NIPS'18) Non-delusional Q-learning and Value-iteration 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DL/">
+            
+                <a href="../DL/">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DL/nips18-optimal.html">
+            
+                <a href="../DL/nips18-optimal.html">
+            
+                    
+                    (NIPS'18) Optimal Algorithms for Non-Smooth Distributed Optimization in Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DL/rcnn.html">
+            
+                <a href="../DL/rcnn.html">
+            
+                    
+                    (CVPR'14) R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../DL/fast-rcnn.html">
+            
+                <a href="../DL/fast-rcnn.html">
+            
+                    
+                    (ICCV'15) Fast R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../DL/faster-rcnn.html">
+            
+                <a href="../DL/faster-rcnn.html">
+            
+                    
+                    (NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../DL/mask-rcnn.html">
+            
+                <a href="../DL/mask-rcnn.html">
+            
+                    
+                    (ICCV'17) Mask R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../DL/gnn-review.html">
+            
+                <a href="../DL/gnn-review.html">
+            
+                    
+                    Review: Graph Nueral Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Extend/">
+            
+                <a href="../Extend/">
+            
+                    
+                    相关阅读
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Extend/siam12-randomized.html">
+            
+                <a href="../Extend/siam12-randomized.html">
+            
+                    
+                    (SIAM Journal on Optimization) Randomized smoothing for stochastic optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >(NIPS'18) Non-delusional Q-learning and Value-iteration </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="non-delusional-q-learning-and-value-iteration">Non-delusional Q-learning and Value-iteration</h1>
+<p>&#x4F5C;&#x8005;&#xFF1A;Tyler Lu, Dale Schuurmans, and Craig Boutilier&#xFF0C;&#x4E09;&#x4E2A;&#x4F5C;&#x8005;&#x5747;&#x6765;&#x81EA;Google&#x3002;&#x6587;&#x7AE0;&#x53D1;&#x8868;&#x4E8E;NIPS-2018&#xFF0C;&#x83B7;&#x5F97;&#x4E86;2018&#x5E74;NIPS&#x7684;Best Paper Award&#x3002;</p>
+<h2 id="&#x601D;&#x8DEF;&#x8109;&#x7EDC;">&#x601D;&#x8DEF;&#x8109;&#x7EDC;</h2>
+<h3 id="motivation">Motivation</h3>
+<p>&#x5F53;&#x7B56;&#x7565;&#xFF08;policy&#xFF09;&#x7684;&#x9009;&#x53D6;<strong>&#x6709;&#x9650;&#x5236;</strong>&#x65F6;&#xFF0C;Q-learning&#x548C;Value-iteration&#x7684;&#x6548;&#x7528;&#x66F4;&#x65B0;&#x6B65;&#x9AA4;&#x4E2D;&#x7684;<script type="math/tex; ">\max</script>&#x64CD;&#x4F5C;&#x4F1A;&#x5E26;&#x6765;&#x201C;Delusional Bias&#x201D;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x7B56;&#x7565;&#x7684;&#x9650;&#x5236;&#x53EF;&#x80FD;&#x4F7F;&#x5F97;<strong>&#x4E0D;&#x662F;&#x6240;&#x6709;</strong>&#x7684;&#x884C;&#x52A8;&#xFF08;Action&#xFF09;&#x90FD;&#x5408;&#x6CD5;&#xFF0C;&#x6B64;&#x65F6;&#x53D6;&#x6700;&#x5927;<strong>&#x4E0D;&#x80FD;&#x5728;&#x6240;&#x6709;&#x7684;&#x884C;&#x52A8;&#x96C6;&#x5408;&#x4E2D;&#x904D;&#x5386;</strong>&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x7B56;&#x7565;&#x9009;&#x53D6;&#x7684;&#x9650;&#x5236;&#x6765;&#x81EA;&#x4E8E;<strong>&#x8FD1;&#x4F3C;&#x51FD;&#x6570;</strong>&#x3002;Q-learning&#x65B9;&#x6CD5;&#x5728;&#x5904;&#x7406;&#x975E;&#x8868;&#x683C;&#x5F62;&#x5F0F;&#x7684;Q&#x503C;&#x65F6;&#x9700;&#x8981;&#x7528;&#x4E00;&#x4E2A;&#x8FD1;&#x4F3C;&#x51FD;&#x6570;&#xFF08;Approximator Function&#xFF09;<script type="math/tex; ">Q_\theta(s, a)</script>&#x6765;&#x8FD1;&#x4F3C;&#x4EFB;&#x610F;State-Action&#x5BF9;&#x7684;Q&#x503C;&#x3002;&#x57FA;&#x4E8E;<script type="math/tex; ">Q_\theta(s, a)</script>&#x7684;&#x7B56;&#x7565;&#x56E0;&#x6B64;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x8FD1;&#x4F3C;&#xFF1A;
+<script type="math/tex; mode=display">
+\pi_\theta(s) = \text{argmax}_{a\in A}Q_\theta(s, a), \theta\in\Theta
+</script>
+&#x82E5;&#x8FD1;&#x4F3C;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5B8C;&#x7F8E;&#x8FD1;&#x4F3C;&#xFF0C;&#x90A3;&#x4E48;<script type="math/tex; ">\pi_\theta</script>&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x6709;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x7528;&#x7EBF;&#x6027;&#x8FD1;&#x4F3C;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#xFF1A;&#x56E0;&#x4E3A;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x8FD1;&#x4F3C;&#x5F02;&#x6216;&#x64CD;&#x4F5C;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x6700;&#x4F18;&#x7B56;&#x7565;&#x521A;&#x597D;&#x662F;&#x5F02;&#x6216;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x4F8B;&#x5982;&#x4E24;&#x4E2A;&#x72B6;&#x6001;<script type="math/tex; ">\times</script>&#x4E24;&#x79CD;&#x884C;&#x52A8;&#x5206;&#x522B;&#x662F;<script type="math/tex; ">(0, 0), (0, 1), (1, 0), (1, 1)</script>&#xFF0C;&#x518D;&#x4EE4;&#x5176;&#x6548;&#x7528;&#x5206;&#x522B;&#x4E3A;<script type="math/tex; ">0, 1, 1, 0</script>&#xFF09;&#xFF0C;&#x7B97;&#x6CD5;&#x662F;&#x65E0;&#x6CD5;&#x6536;&#x655B;&#x5230;&#x6700;&#x4F18;&#x7B56;&#x7565;&#x7684;&#x3002;</p>
+<h3 id="method">Method</h3>
+<p>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;Delution&#x95EE;&#x9898;&#xFF0C;&#x4F5C;&#x8005;&#x63D0;&#x51FA;&#x4E86;&#x7528;<code>Information Set</code>&#x6765;&#x4F7F;&#x6C42;<script type="math/tex; ">\max</script>&#x5408;&#x6CD5;&#x5316;&#x3002;&#x5176;&#x65B9;&#x6CD5;&#x662F;&#x628A;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x8F6C;&#x5316;&#x8FC7;&#x7A0B;&#x90FD;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x5220;&#x6389;&#x5728;&#x7B56;&#x7565;&#x9650;&#x5236;&#x4E0B;&#x4E0D;&#x53EF;&#x80FD;&#x5B9E;&#x73B0;&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#xFF0C;&#x6700;&#x540E;&#x5728;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x7684;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x4E2D;&#x9009;&#x62E9;&#x6700;&#x4F18;&#x7684;&#x3002;</p>
+<h2 id="&#x5DE5;&#x4F5C;&#x4EAE;&#x70B9;&#x548C;&#x4E0D;&#x8DB3;">&#x5DE5;&#x4F5C;&#x4EAE;&#x70B9;&#x548C;&#x4E0D;&#x8DB3;</h2>
+<h3 id="&#x4EAE;&#x70B9;">&#x4EAE;&#x70B9;</h3>
+<p>&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x7684;&#x6700;&#x5927;&#x4EAE;&#x70B9;&#x5728;&#x4E8E;&#x53D1;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;RL&#x91CC;&#x666E;&#x904D;&#x5B58;&#x5728;&#x7684;&#x4E00;&#x79CD;&#x73B0;&#x8C61;<code>Delusion</code>&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x4F8B;&#x5B50;&#xFF08;Delusion&#x7684;&#x4F8B;&#x5B50;&#x548C;&#x540E;&#x679C;&#xFF0C;&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x4E86;information set&#x7684;Value-iteration&#x65B9;&#x6CD5;PCVI&#x7684;&#x4F8B;&#x5B50;&#x7B49;&#xFF09;&#x8F85;&#x52A9;&#x8BF4;&#x660E;&#x3002;</p>
+<h3 id="&#x4E0D;&#x8DB3;">&#x4E0D;&#x8DB3;</h3>
+<p>&#x56E0;&#x4E3A;&#x6574;&#x4E2A;&#x5DE5;&#x4F5C;&#x4E2D;&#x4F5C;&#x8005;&#x90FD;&#x662F;&#x7528;&#x7EBF;&#x6027;&#x8FD1;&#x4F3C;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x5BF9;&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x6700;&#x5927;&#x7684;concern&#x662F;&#x5F53;&#x8FD1;&#x4F3C;&#x51FD;&#x6570;&#x8DB3;&#x591F;&#x7075;&#x6D3B;&#x7684;&#x65F6;&#x5019;&#xFF0C;Delution&#x7684;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;&#x5230;&#x5E95;&#x662F;&#x5426;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x82B1;&#x8D39;&#x8FD9;&#x4E48;&#x5927;&#x7684;&#x8BA1;&#x7B97;&#x4EE3;&#x4EF7;&#xFF08;&#x8BB0;&#x4F4F;&#x8FC7;&#x53BB;&#x7684;&#x6240;&#x6709;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#xFF09;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="&#x5199;&#x6CD5;&#x7279;&#x8272;">&#x5199;&#x6CD5;&#x7279;&#x8272;</h2>
+<p>&#x6587;&#x7AE0;&#x7684;&#x7ED3;&#x6784;&#x662F;<strong>Introduction</strong><script type="math/tex; ">\rightarrow</script><strong>Preliminaries</strong><script type="math/tex; ">\rightarrow</script><strong>A Concrete Example of Delusional Bias and Its Consequeces</strong><script type="math/tex; ">\rightarrow</script><strong>PCVI and PCQL</strong><script type="math/tex; ">\rightarrow</script><strong>Suggestions for Practical Use</strong>&#x3002;&#x8865;&#x5145;&#x6750;&#x6599;&#x91CC;&#x8BB2;&#x4E86;4&#x4E2A;Example&#x3001;&#x548C;double Q-learning&#x7684;&#x533A;&#x522B;&#x3001;PCVI&#x548C;PCQL&#x7684;&#x5B9A;&#x7406;&#x8BC1;&#x660E;&#x548C;&#x4E00;&#x4E2A;PCQL&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x6211;&#x53EA;&#x770B;&#x4E86;&#x524D;&#x4E09;&#x8282;&#x3002;&#x56E0;&#x4E3A;&#x5BF9;RL&#x7684;&#x6587;&#x732E;&#x4E0D;&#x719F;&#x6089;&#xFF0C;&#x770B;&#x4E86;&#x5F88;&#x4E45;&#x624D;&#x660E;&#x767D;&#x6587;&#x7AE0;&#x7684;&#x76EE;&#x7684;&#x3002;&#x6211;&#x6682;&#x65F6;&#x53EA;&#x80FD;&#x611F;&#x53D7;&#x5230;&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x4E3E;&#x4E86;&#x5F88;&#x591A;&#x4F8B;&#x5B50;&#xFF0C;&#x653E;&#x5927;&#x8FD9;&#x4E2A;Delusion&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;Convergence&#x4E4B;&#x7C7B;&#x7684;&#x8BC1;&#x660E;&#x3002;&#x91CC;&#x9762;&#x7684;&#x6570;&#x5B66;&#x6211;&#x51C6;&#x5907;&#x5728;&#x5B66;&#x4E86;VC learning theory&#x7B49;&#x6570;&#x5B66;&#x80FD;&#x529B;&#x63D0;&#x5347;&#x8BA1;&#x5212;&#x4E4B;&#x540E;&#x518D;&#x56DE;&#x6765;&#x770B;&#x770B;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 强化学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../DL/" class="navigation navigation-next " aria-label="Next page: 深度学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"(NIPS'18) Non-delusional Q-learning and Value-iteration ","level":"1.2.1","depth":2,"next":{"title":"深度学习","level":"1.3","depth":1,"path":"DL/README.md","ref":"DL/README.md","articles":[{"title":"(NIPS'18) Optimal Algorithms for Non-Smooth Distributed Optimization in Networks","level":"1.3.1","depth":2,"path":"DL/nips18-optimal.md","ref":"DL/nips18-optimal.md","articles":[]},{"title":"(CVPR'14) R-CNN","level":"1.3.2","depth":2,"path":"DL/rcnn.md","ref":"DL/rcnn.md","articles":[]},{"title":"(ICCV'15) Fast R-CNN","level":"1.3.3","depth":2,"path":"DL/fast-rcnn.md","ref":"DL/fast-rcnn.md","articles":[]},{"title":"(NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks","level":"1.3.4","depth":2,"path":"DL/faster-rcnn.md","ref":"DL/faster-rcnn.md","articles":[]},{"title":"(ICCV'17) Mask R-CNN","level":"1.3.5","depth":2,"path":"DL/mask-rcnn.md","ref":"DL/mask-rcnn.md","articles":[]},{"title":"Review: Graph Nueral Networks","level":"1.3.6","depth":2,"path":"DL/gnn-review.md","ref":"DL/gnn-review.md","articles":[]}]},"previous":{"title":"强化学习","level":"1.2","depth":1,"path":"RL/README.md","ref":"RL/README.md","articles":[{"title":"(NIPS'18) Non-delusional Q-learning and Value-iteration ","level":"1.2.1","depth":2,"path":"RL/nips18-non-delusional.md","ref":"RL/nips18-non-delusional.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"RL/nips18-non-delusional.md","mtime":"2019-05-17T01:58:20.074Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-17T01:58:21.121Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

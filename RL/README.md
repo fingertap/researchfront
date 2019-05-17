@@ -1,3 +1,0 @@
-# 强化学习
-
-强化学习（Reinforcement Learning）

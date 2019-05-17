@@ -1,0 +1,407 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>(ICCV'15) Fast R-CNN · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="faster-rcnn.html" />
+    
+    
+    <link rel="prev" href="rcnn.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Research Front Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../RL/">
+            
+                <a href="../RL/">
+            
+                    
+                    强化学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../RL/nips18-non-delusional.html">
+            
+                <a href="../RL/nips18-non-delusional.html">
+            
+                    
+                    (NIPS'18) Non-delusional Q-learning and Value-iteration 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="nips18-optimal.html">
+            
+                <a href="nips18-optimal.html">
+            
+                    
+                    (NIPS'18) Optimal Algorithms for Non-Smooth Distributed Optimization in Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rcnn.html">
+            
+                <a href="rcnn.html">
+            
+                    
+                    (CVPR'14) R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="fast-rcnn.html">
+            
+                <a href="fast-rcnn.html">
+            
+                    
+                    (ICCV'15) Fast R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="faster-rcnn.html">
+            
+                <a href="faster-rcnn.html">
+            
+                    
+                    (NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="mask-rcnn.html">
+            
+                <a href="mask-rcnn.html">
+            
+                    
+                    (ICCV'17) Mask R-CNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="gnn-review.html">
+            
+                <a href="gnn-review.html">
+            
+                    
+                    Review: Graph Nueral Networks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Extend/">
+            
+                <a href="../Extend/">
+            
+                    
+                    相关阅读
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Extend/siam12-randomized.html">
+            
+                <a href="../Extend/siam12-randomized.html">
+            
+                    
+                    (SIAM Journal on Optimization) Randomized smoothing for stochastic optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >(ICCV'15) Fast R-CNN</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="fastr-cnn"><code>Fast</code>R-CNN``</h1>
+<p>&#x8FD9;&#x7BC7;&#x8BBA;&#x6587;&#x7684;&#x4F5C;&#x8005;&#x662F;<code>R-CNN</code>&#x7684;&#x4F5C;&#x8005;Ross Girshick&#xFF0C;&#x6765;&#x81EA;Microsoft Research&#xFF0C;&#x53D1;&#x8868;&#x5728;2015&#x5E74;&#x7684;ICCV&#x4E0A;&#x3002;</p>
+<h2 id="&#x601D;&#x8DEF;&#x8109;&#x7EDC;">&#x601D;&#x8DEF;&#x8109;&#x7EDC;</h2>
+<p><code>R-CNN</code>&#x592A;&#x6162;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;Proposal&#x90FD;&#x8981;&#x8FC7;&#x4E00;&#x6B21;CNN&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5171;&#x4EAB;&#x8BA1;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x82E5;&#x7ED3;&#x679C;&#x4E0D;&#x5171;&#x4EAB;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x6BCF;&#x4E2A;proposal&#x7684;&#x89C6;&#x89C9;&#x7279;&#x5F81;&#xFF0C;&#x5B58;&#x50A8;&#x3001;&#x8BFB;&#x53D6;&#x7684;&#x5F00;&#x9500;&#x5927;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x6709;&#x51E0;&#x4E2A;&#x7EC6;&#x8282;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x4F7F;&#x5F97;<code>Fast R-CNN</code>&#x7684;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x4E0D;&#x518D;&#x662F;<code>R-CNN</code>&#x4E00;&#x6837;&#x7684;&#x591A;&#x9636;&#x6BB5;&#x3002;</p>
+<p>&#x548C;<code>R-CNN</code>&#x4E00;&#x6837;&#xFF0C;<code>Fast R-CNN</code>&#x9700;&#x8981;Selective Search&#x63D0;&#x4F9B;Region Proposal&#x3002;&#x62FF;&#x5230;Proposal&#x4EE5;&#x540E;&#x5E76;&#x4E0D;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;Proposal&#x8FDB;&#x884C;CNN&#x7684;&#x89C6;&#x89C9;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#xFF0C;&#x800C;&#x662F;&#x5BF9;&#x6BCF;&#x5F20;&#x56FE;&#x7247;&#x5148;&#x8FC7;&#x4E00;&#x4E2A;CNN&#xFF0C;&#x62FF;&#x5230;&#x4E00;&#x4E2A;Feature map&#xFF08;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF09;&#xFF0C;&#x518D;&#x627E;&#x5230;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x7684;&#x6BCF;&#x4E2A;Proposal&#x5BF9;&#x5E94;&#x5728;&#x8FD9;&#x4E2A;Feature map&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x5BF9;&#x8FD9;&#x4E2A;&#x533A;&#x57DF;&#x8FDB;&#x884C;RoI Pooling&#x3002;&#x8FD9;&#x6837;&#x5904;&#x7406;&#x80FD; 1&#xFF09;&#x5BF9;&#x6BCF;&#x4E2A;Proposal&#x5F97;&#x5230;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x7279;&#x5F81;&#xFF1B;2&#xFF09;&#x4E0D;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;Proposal&#x7684;&#x89C6;&#x89C9;&#x7279;&#x5F81;&#x3002;&#x4E0B;&#x9762;&#x662F;RoI Pooling&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p><img src="assets/roi-pooling.jpeg" alt="&quot;RoI Pooling&quot;"></p>
+<p>&#x5F97;&#x5230;&#x4E86;Proposal&#x7684;&#x7279;&#x5F81;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x540C;&#x4E8E;<code>R-CNN</code>&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF08;&#x8BAD;&#x7EC3;SVM+&#x8BAD;&#x7EC3;Bounding Box Regressor&#xFF09;&#xFF0C;<code>Fast R-CNN</code>&#x7528;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x6765;&#x8F93;&#x51FA;&#x6700;&#x540E;&#x5FAE;&#x8C03;&#x540E;&#x7684;Bounding Box&#x548C;&#x7C7B;&#x9884;&#x6D4B;&#x3002;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x8FD9;&#x4E2A;Proposal&#x7684;&#x7279;&#x5F81;&#x5C42;&#x540E;&#x63A5;&#x4E00;&#x4E2A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF0C;&#x5176;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x6709;&#x4E24;&#x4E2A;&#x5144;&#x5F1F;&#x5C42;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8F93;&#x51FA;&#x7C7B;&#x9884;&#x6D4B;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x56DE;&#x5F52;&#x76D2;&#x5B50;&#x7684;&#x8FB9;&#x6846;&#x5E73;&#x79FB;&#x3001;&#x653E;&#x7F29;&#x3002;</p>
+<h2 id="&#x5199;&#x4F5C;&#x6280;&#x5DE7;">&#x5199;&#x4F5C;&#x6280;&#x5DE7;</h2>
+<p>&#x5728;&#x5B9E;&#x9A8C;&#x90E8;&#x5206;&#x7684;&#x6700;&#x5F00;&#x59CB;&#x50CF;&#x5217;Contribution&#x4E00;&#x6837;&#x5217;&#x51FA;&#x4E3B;&#x8981;&#x7684;Results&#x6765;&#x652F;&#x6491;Introduction&#x5904;&#x7684;Contribution&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rcnn.html" class="navigation navigation-prev " aria-label="Previous page: (CVPR'14) R-CNN">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="faster-rcnn.html" class="navigation navigation-next " aria-label="Next page: (NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"(ICCV'15) Fast R-CNN","level":"1.3.3","depth":2,"next":{"title":"(NIPS'15) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks","level":"1.3.4","depth":2,"path":"DL/faster-rcnn.md","ref":"DL/faster-rcnn.md","articles":[]},"previous":{"title":"(CVPR'14) R-CNN","level":"1.3.2","depth":2,"path":"DL/rcnn.md","ref":"DL/rcnn.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DL/fast-rcnn.md","mtime":"2019-05-17T01:58:20.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-17T01:58:21.121Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
