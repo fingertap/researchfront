@@ -48,4 +48,4 @@ $$
 O\left(\frac{RL_l}{\epsilon}\frac{\tau}{\sqrt{\gamma}}+\left(\frac{RL_l}{\epsilon}\right)^2\right)
 $$
 
-达到了最优。总的来说就是**中**
+达到了最优。
